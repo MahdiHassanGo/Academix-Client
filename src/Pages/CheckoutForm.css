@@ -1,0 +1,44 @@
+.card-container {
+    position: relative;
+    width: 400px; /* Adjust based on your card image size */
+    margin: 0 auto;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.payment-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust based on your card image */
+    text-align: center;
+}
+
+.card-element-container {
+    margin-bottom: 20px; /* Space between CardElement and button */
+}
+
+.pay-button {
+    background-color: #ff6b6b; /* Orange color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pay-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pay-button:hover:not(:disabled) {
+    background-color: #ff4c4c; /* Darker orange on hover */
+}
