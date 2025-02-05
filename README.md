@@ -1,6 +1,4 @@
-Here's your formatted README file for **Academix**:  
 
-```markdown
 # Academix  
 A Comprehensive Education Management Platform  
 
