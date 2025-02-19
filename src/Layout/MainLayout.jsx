@@ -11,6 +11,7 @@ import BecomeTeacher from "../components/BecomeTeacher";
 import MoreInfo from "../components/MoreInfo";
 import AboutUs from "../components/AboutUs";
 import Total from "../components/Total";
+import NewsLetter from "../components/NewsLetter";
 
 const MainLayout = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const MainLayout = () => {
         <CustomerReview></CustomerReview>
         <MoreInfo></MoreInfo>
         <AboutUs></AboutUs>
+        <NewsLetter></NewsLetter>
       </div>
       <Footer></Footer>
     </div>

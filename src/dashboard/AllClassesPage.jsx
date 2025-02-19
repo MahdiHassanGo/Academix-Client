@@ -26,7 +26,7 @@ const AllClasses = () => {
   const fetchClasses = async () => {
     try {
       const token = localStorage.getItem("access-token");
-      const response = await fetch("https://server-ecru-nu-72.vercel.app/classes", {
+      const response = await fetch("http://localhost:5000/classes", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -54,7 +54,7 @@ const AllClasses = () => {
   const handleApprove = async (id) => {
     try {
       const token = localStorage.getItem("access-token");
-      const response = await fetch(`https://server-ecru-nu-72.vercel.app/classes/${id}/approve`, {
+      const response = await fetch(`http://localhost:5000/classes/${id}/approve`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -85,7 +85,7 @@ const AllClasses = () => {
   const handleReject = async (id) => {
     try {
       const token = localStorage.getItem("access-token");
-      const response = await fetch(`https://server-ecru-nu-72.vercel.app/classes/${id}/reject`, {
+      const response = await fetch(`http://localhost:5000/classes/${id}/reject`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -71,7 +71,7 @@ const CheckoutForm = () => {
       };
 
       const token = localStorage.getItem("access-token");
-      const response = await fetch(`https://server-ecru-nu-72.vercel.app/enroll/${classData._id}`, {
+      const response = await fetch(`http://localhost:5000/enroll/${classData._id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

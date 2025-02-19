@@ -27,7 +27,7 @@ const MyClass = () => {
     const fetchClasses = async () => {
       try {
         const response = await fetch(
-          `https://server-ecru-nu-72.vercel.app/classes?email=${user?.email}`
+          `http://localhost:5000/classes?email=${user?.email}`
         );
   
         if (!response.ok) {
@@ -61,7 +61,7 @@ const MyClass = () => {
 
     if (confirmDelete.isConfirmed) {
       try {
-        const response = await fetch(`https://server-ecru-nu-72.vercel.app/classes/${classId}`, {
+        const response = await fetch(`http://localhost:5000/classes/${classId}`, {
           method: "DELETE",
         });
 
@@ -100,7 +100,7 @@ const MyClass = () => {
 
     try {
       const response = await fetch(
-        `https://server-ecru-nu-72.vercel.app/classes/${selectedClass._id}`,
+        `http://localhost:5000/classes/${selectedClass._id}`,
         {
           method: "PUT",
           headers: {

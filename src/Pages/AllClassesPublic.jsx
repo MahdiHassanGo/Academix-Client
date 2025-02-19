@@ -28,7 +28,7 @@ const AllClassesPublic = () => {
   useEffect(() => {
     const fetchClasses = async () => {
       try {
-        const response = await fetch("https://server-ecru-nu-72.vercel.app/classes", {
+        const response = await fetch("http://localhost:5000/classes", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("access-token")}`,
           },

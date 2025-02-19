@@ -10,13 +10,14 @@ const TeacherReq = () => {
     document.title = "Teacher Requests | Academix";
   }, []);
 
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
-    
-    useEffect(() => {
-      Aos.init({ duration: 1000 });
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const [teachers, setTeachers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -30,7 +31,7 @@ const TeacherReq = () => {
     }
 
     try {
-      const response = await fetch("https://server-ecru-nu-72.vercel.app/teachers/pending", {
+      const response = await fetch("http://localhost:5000/teachers/pending", {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
@@ -68,7 +69,7 @@ const TeacherReq = () => {
 
     try {
       const teacherResponse = await fetch(
-        `https://server-ecru-nu-72.vercel.app/teachers/${teacher.email}`,
+        `http://localhost:5000/teachers/${teacher.email}`,
         {
           method: "PATCH",
           headers: {
@@ -83,7 +84,7 @@ const TeacherReq = () => {
       }
 
       const userResponse = await fetch(
-        `https://server-ecru-nu-72.vercel.app/users/role/${teacher.email}`,
+        `http://localhost:5000/users/role/${teacher.email}`,
         {
           method: "PATCH",
           headers: {
@@ -142,7 +143,7 @@ const TeacherReq = () => {
 
         try {
           const response = await fetch(
-            `https://server-ecru-nu-72.vercel.app/teachers/${teacher._id}/reject`,
+            `http://localhost:5000/teachers/${teacher._id}/reject`,
             {
               method: "PATCH",
               headers: {
@@ -156,7 +157,6 @@ const TeacherReq = () => {
             throw new Error(`Error rejecting teacher. Status: ${response.status}`);
           }
 
-          const data = await response.json();
           setTeachers(teachers.filter((t) => t._id !== teacher._id));
 
           Swal.fire({
@@ -180,7 +180,7 @@ const TeacherReq = () => {
     });
   };
 
-  if (loading) return <p><Loading></Loading></p>;
+  if (loading) return <p><Loading /></p>;
   if (error) return <p>{error}</p>;
 
   return (
@@ -189,47 +189,57 @@ const TeacherReq = () => {
         <h2 className="text-3xl">Pending Teacher Requests</h2>
         <h2 className="text-3xl">Total Requests: {teachers.length}</h2>
       </div>
-      <div className="overflow-x-auto w-11/12 mx-auto">
-        <table className="table table-zebra w-full">
-          <thead>
-            <tr>
-              <th className="bg-orange-300 text-white"></th>
-              <th className="bg-orange-300 text-white">Name</th>
-              <th className="bg-orange-300 text-white">Email</th>
-              <th className="bg-orange-300 text-white">Status</th>
-              <th className="bg-orange-300 text-white">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {teachers.map((teacher, index) => (
-              <tr
-                key={teacher._id}
-                data-aos="fade-up"
-                data-aos-delay={`${index * 100}`} 
-              >
-                <th>{index + 1}</th>
-                <td>{teacher.name}</td>
-                <td>{teacher.email}</td>
-                <td>{teacher.status}</td>
-                <td>
-                  <button
-                    onClick={() => handleApproveTeacher(teacher)}
-                    className="btn bg-orange-500 btn-sm text-white mr-2"
-                  >
-                    Approve
-                  </button>
-                  <button
-                    onClick={() => handleReject(teacher)}
-                    className="btn btn-ghost btn-sm"
-                  >
-                    Reject
-                  </button>
-                </td>
+
+      {teachers.length === 0 ? (
+        <div className="text-center mt-10">
+          <FaChalkboardTeacher className="text-6xl text-gray-400 mx-auto" />
+          <h2 className="text-2xl text-gray-500 mt-4">
+            No teacher requests currently.
+          </h2>
+        </div>
+      ) : (
+        <div className="overflow-x-auto w-11/12 mx-auto">
+          <table className="table table-zebra w-full">
+            <thead>
+              <tr>
+                <th className="bg-orange-300 text-white"></th>
+                <th className="bg-orange-300 text-white">Name</th>
+                <th className="bg-orange-300 text-white">Email</th>
+                <th className="bg-orange-300 text-white">Status</th>
+                <th className="bg-orange-300 text-white">Action</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {teachers.map((teacher, index) => (
+                <tr
+                  key={teacher._id}
+                  data-aos="fade-up"
+                  data-aos-delay={`${index * 100}`} 
+                >
+                  <th>{index + 1}</th>
+                  <td>{teacher.name}</td>
+                  <td>{teacher.email}</td>
+                  <td>{teacher.status}</td>
+                  <td>
+                    <button
+                      onClick={() => handleApproveTeacher(teacher)}
+                      className="btn bg-orange-500 btn-sm text-white mr-2"
+                    >
+                      Approve
+                    </button>
+                    <button
+                      onClick={() => handleReject(teacher)}
+                      className="btn btn-ghost btn-sm"
+                    >
+                      Reject
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

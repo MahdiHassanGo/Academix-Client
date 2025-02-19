@@ -20,7 +20,7 @@ const ClassesSection = () => {
   useEffect(() => {
     const fetchClasses = async () => {
       try {
-        const response = await axios.get("https://server-ecru-nu-72.vercel.app/classes");
+        const response = await axios.get("http://localhost:5000/classes");
         const sortedClasses = response.data.sort((a, b) => b.enrollmentCount - a.enrollmentCount);
         setClasses(sortedClasses);
       } catch (error) {

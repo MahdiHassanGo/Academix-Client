@@ -41,13 +41,13 @@ const Total = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const usersResponse = await fetch('https://server-ecru-nu-72.vercel.app/users/count');
+        const usersResponse = await fetch('http://localhost:5000/users/count');
         const usersCount = await usersResponse.json();
         console.log('Total Users:', usersCount);
 
         let teachersCount = { total: 0 }; 
         try {
-          const teachersResponse = await fetch('https://server-ecru-nu-72.vercel.app/teachers/count');
+          const teachersResponse = await fetch('http://localhost:5000/teachers/count');
           if (teachersResponse.ok) {
             teachersCount = await teachersResponse.json();
           } else {
@@ -58,7 +58,7 @@ const Total = () => {
         }
         console.log('Total Teachers:', teachersCount);
 
-        const enrollmentsResponse = await fetch('https://server-ecru-nu-72.vercel.app/enrollments/count');
+        const enrollmentsResponse = await fetch('http://localhost:5000/enrollments/count');
         const enrollmentsCount = await enrollmentsResponse.json();
         console.log('Total Enrollments:', enrollmentsCount);
 
