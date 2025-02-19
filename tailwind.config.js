@@ -24,9 +24,7 @@ export default {
         bgButton2:"#fda085",
         footerBg1:"#4facfe",
         footerBg2:"#00f2fe",
-        bgforRecent:'#DE7C7D',
-
-     
+        bgforRecent:'#DE7C7D',  
       },
       fontFamily:{
 'Roboto': ["Roboto Mono", 'serif'],

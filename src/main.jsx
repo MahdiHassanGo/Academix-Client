@@ -12,12 +12,14 @@ import { RouterProvider } from "react-router-dom";
 
 import AuthProvider from "./provider/AuthProvider.jsx";
 import router from "./routes/router.jsx";
+import ThemeProvider from "./provider/ThemeContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
     <QueryClientProvider client={queryClient}>
-    <RouterProvider router={router} />
+    <ThemeProvider>  <RouterProvider router={router} /></ThemeProvider>
+  
     </QueryClientProvider>
     
     </AuthProvider>
