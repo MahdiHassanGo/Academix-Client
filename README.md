@@ -3,7 +3,10 @@
 A Comprehensive Education Management Platform  
 
 ## Visit the live site: [Academix](https://academix-a7d0b.web.app/)  
-
+ 
+ ## Admin:
+  email:admin@gmail.com
+  password:Admin018
 ### Overview  
 Welcome to **Academix**, a powerful and intuitive platform designed to streamline education management for institutions, teachers, students, and administrators. Academix provides a centralized system for managing users, classes, enrollments, and more, making it easier to organize and track educational activities.  
 

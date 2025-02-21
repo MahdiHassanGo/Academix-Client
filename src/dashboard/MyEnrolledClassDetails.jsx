@@ -150,7 +150,7 @@ const MyEnrolledClassDetails = () => {
   }
 
   return (
-    <div className="mt-20 w-11/12 mx-auto mb-10">
+    <div className="mt-20 w-11/12 mx-auto mb-10 dark:text-black">
     
       <div className="" data-aos="fade-up" data-aos-delay="100">
         <button
@@ -162,7 +162,7 @@ const MyEnrolledClassDetails = () => {
       </div>
 
      
-      <h1 className="text-3xl font-bold text-center mb-6" data-aos="fade-up" data-aos-delay="200">
+      <h1 className="text-3xl font-bold text-center mb-6 dark:text-white" data-aos="fade-up" data-aos-delay="200">
         {classData.title}
       </h1>
 
@@ -188,7 +188,7 @@ const MyEnrolledClassDetails = () => {
 
     
       <div className="mt-10 overflow-x-auto" data-aos="fade-up" data-aos-delay="400">
-        <h2 className="text-2xl font-bold mb-4">Assignments</h2>
+        <h2 className="text-2xl font-bold mb-4 dark:text-white">Assignments</h2>
         <table className="min-w-full bg-white border border-gray-200">
           <thead>
             <tr>

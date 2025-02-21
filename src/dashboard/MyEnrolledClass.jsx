@@ -90,7 +90,7 @@ const MyEnrolledClass = () => {
 
   if (enrolledClasses.length === 0) {
     return (
-      <div className="text-center mt-20">
+      <div className="text-center mt-20 dark:text-white">
         <p className="text-lg mb-4">No classes enrolled yet.</p>
         <button 
           onClick={() => navigate('/allclassespublic')}
@@ -103,8 +103,8 @@ const MyEnrolledClass = () => {
   }
 
   return (
-    <div className="mt-20 w-11/12 mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-6" data-aos="fade-up">
+    <div className="mt-20 w-11/12 mx-auto dark:text-black">
+      <h1 className="text-3xl font-bold text-center mb-6 dark:text-white" data-aos="fade-up">
         My Enrolled Classes
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
