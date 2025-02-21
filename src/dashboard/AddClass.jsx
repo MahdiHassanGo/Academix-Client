@@ -93,10 +93,10 @@ const AddClass = () => {
           data-aos="fade-up" 
           data-aos-delay="200"
         >
-          <h1 className="text-2xl font-bold mb-6 mt-2">Add a New Class</h1>
+          <h1 className="text-2xl font-bold mb-6 mt-2 dark:text-black">Add a New Class</h1>
           
           <div className="mb-4" data-aos="fade-up" data-aos-delay="300">
-            <label className="block text-sm font-medium">Name</label>
+            <label className="block text-sm font-medium dark:text-black">Name</label>
             <input
               type="text"
               value={user?.displayName}
@@ -106,7 +106,7 @@ const AddClass = () => {
           </div>
 
           <div className="mb-4" data-aos="fade-up" data-aos-delay="400">
-            <label className="block text-sm font-medium">Email</label>
+            <label className="block text-sm font-medium dark:text-black">Email</label>
             <input
               type="email"
               value={user?.email}
@@ -116,7 +116,7 @@ const AddClass = () => {
           </div>
 
           <div className="mb-4" data-aos="fade-up" data-aos-delay="500">
-            <label className="block text-sm font-medium">Title</label>
+            <label className="block text-sm font-medium dark:text-black">Title</label>
             <input
               {...register("title", { 
                 required: "Title is required",
@@ -133,7 +133,7 @@ const AddClass = () => {
           </div>
 
           <div className="mb-4" data-aos="fade-up" data-aos-delay="600">
-            <label className="block text-sm font-medium">Price</label>
+            <label className="block text-sm font-medium dark:text-black">Price</label>
             <input
               {...register("price", { 
                 required: "Price is required",
@@ -150,7 +150,7 @@ const AddClass = () => {
           </div>
 
           <div className="mb-4" data-aos="fade-up" data-aos-delay="700">
-            <label className="block text-sm font-medium">Description</label>
+            <label className="block text-sm font-medium dark:text-black">Description</label>
             <textarea
               {...register("description", { 
                 required: "Description is required",
@@ -166,7 +166,7 @@ const AddClass = () => {
           </div>
 
           <div className="mb-4" data-aos="fade-up" >
-            <label className="block text-sm font-medium">Image URL</label>
+            <label className="block text-sm font-medium dark:text-black">Image URL</label>
             <input
               {...register("image", { 
                 required: "Image URL is required",
@@ -184,7 +184,7 @@ const AddClass = () => {
 
           <button 
             type="submit" 
-            className="btn bg-orange-400 text-white w-full mt-4"
+            className="btn bg-orange-400 text-white w-full mt-4 "
            
           >
             Add Class

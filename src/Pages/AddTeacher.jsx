@@ -124,9 +124,9 @@ const AddTeacher = () => {
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-6 shadow-md rounded-lg"  data-aos="fade-up">
-          <h1 className="text-2xl font-bold mb-6 mt-10">Apply to Teach on Academix</h1>
+          <h1 className="text-2xl font-bold mb-6 mt-10 dark:text-black">Apply to Teach on Academix</h1>
           <div className="mb-4">
-            <label className="block text-sm font-medium">Name</label>
+            <label className="block text-sm font-medium dark:text-black">Name</label>
             <input
               type="text"
               value={user?.displayName}
@@ -135,7 +135,7 @@ const AddTeacher = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium">Email</label>
+            <label className="block text-sm font-medium dark:text-black">Email</label>
             <input
               type="email"
               value={user?.email}
@@ -144,7 +144,7 @@ const AddTeacher = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium">Profile Image URL</label>
+            <label className="block text-sm font-medium dark:text-black">Profile Image URL</label>
             <input
               type="text"
               {...register("image")}
@@ -153,15 +153,15 @@ const AddTeacher = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium">Experience</label>
+            <label className="block text-sm font-medium dark:text-black">Experience</label>
             <select {...register("experience", { required: true })} className="input input-bordered w-full">
-              <option value="beginner">Beginner</option>
+              <option value="beginner ">Beginner</option>
               <option value="mid-level">Mid-level</option>
               <option value="experienced">Experienced</option>
             </select>
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium">Title</label>
+            <label className="block text-sm font-medium dark:text-black">Title</label>
             <input
               type="text"
               {...register("title", { required: true })}
@@ -170,7 +170,7 @@ const AddTeacher = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium">Category</label>
+            <label className="block text-sm font-medium dark:text-black">Category</label>
             <select {...register("category", { required: true })} className="input input-bordered w-full">
               {categories.map((category, index) => (
                 <option key={index} value={category}>
@@ -179,7 +179,7 @@ const AddTeacher = () => {
               ))}
             </select>
           </div>
-          <button type="submit" className="btn bg-orange-500 text-white w-full mt-4">
+          <button type="submit" className="btn bg-orange-500 text-white w-full mt-4 ">
             Submit Application
           </button>
         </form>

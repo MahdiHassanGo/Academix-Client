@@ -34,24 +34,24 @@ const Dashboard = () => {
           {isAdmin ? (
             <>
               <li>
-                <NavLink to="/dashboard/teacher-req">
+                <NavLink to="/dashboard/teacher-req" className="dark:text-black">
                   <FaChalkboardTeacher />
                   Teacher Requests
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/allclass">
+                <NavLink to="/dashboard/allclass" className="dark:text-black">
                   <FaUsers /> AllClasses
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/users">
+                <NavLink to="/dashboard/users" className="dark:text-black">
                   <IoMdBookmarks />
                   Users
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/profile">
+                <NavLink to="/dashboard/profile" className="dark:text-black">
                   <FaUser />
                   Profile
                 </NavLink>
@@ -60,19 +60,19 @@ const Dashboard = () => {
           ) : isTeacher ? (
             <>
               <li>
-                <NavLink to="/dashboard/myclass">
+                <NavLink to="/dashboard/myclass" className="dark:text-black">
                   <IoMdBookmarks />
                   My Classes
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/addclass">
+                <NavLink to="/dashboard/addclass" className="dark:text-black">
                   <FaBook />
                   Add Class
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/profile">
+                <NavLink to="/dashboard/profile" className="dark:text-black">
                   <FaUser />
                   Profile
                 </NavLink>
@@ -81,13 +81,13 @@ const Dashboard = () => {
           ) : isStudent ? (
             <>
               <li>
-                <NavLink to="/dashboard/myenrolledclass">
+                <NavLink to="/dashboard/myenrolledclass" className="dark:text-black">
                   <IoMdBookmarks />
                   My Enrolled Classes
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/profile">
+                <NavLink to="/dashboard/profile" className="dark:text-black">
                   <FaUser />
                   Profile
                 </NavLink>
@@ -96,7 +96,7 @@ const Dashboard = () => {
           ) : null}
           <div className="divider"></div>
           <li>
-            <NavLink to="/">
+            <NavLink to="/" className="dark:text-black">
               <FaHome></FaHome> Home
             </NavLink>
           </li>

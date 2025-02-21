@@ -144,16 +144,16 @@ const MyClass = () => {
   if (classes.length === 0) {
     return (
       <div className="mt-15 w-11/12 mx-auto text-center">
-        <h1 className="text-3xl font-bold mb-6">My Classes</h1>
-        <p>No classes found. Add a new class to get started.</p>
+        <h1 className="text-3xl font-bold mb-6 dark:text-white ">My Classes</h1>
+        <p className="dark:text-white">No classes found. Add a new class to get started.</p>
       </div>
     );
   }
   
   return (
     <div className="mt-20 w-11/12 mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-6" data-aos="fade-up">My Classes</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <h1 className="text-3xl font-bold text-center mb-6 dark:text-white" data-aos="fade-up">My Classes</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 dark:text-black">
         {classes.map((cls, index) => (
           <div key={cls._id} className="card bg-white shadow-md rounded-lg" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
             <figure>

@@ -87,8 +87,8 @@ const ClassDetails = () => {
   if (!classData) return <p><Loading></Loading></p>;
 
   return (
-    <div className="mt-35 w-11/12 mx-auto">
-      <h1 className="text-5xl font-bold text-center mb-10" data-aos="fade-up">Class Details</h1>
+    <div className="mt-35 w-11/12 mx-auto dark:text-black">
+      <h1 className="text-5xl font-bold text-center mb-10 dark:text-white" data-aos="fade-up">Class Details</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         <div className="card bg-white shadow-lg rounded-lg p-6" data-aos="fade-up" data-aos-delay="100">
           <h2 className="text-xl font-bold">Total Enrollment</h2>
@@ -124,12 +124,12 @@ const ClassDetails = () => {
               onChange={(e) => setAssignmentTitle(e.target.value)}
               className="input input-bordered w-full mb-4"
             />
-            <input
+            <input 
               type="date"
               placeholder="Deadline"
               value={assignmentDeadline}
               onChange={(e) => setAssignmentDeadline(e.target.value)}
-              className="input input-bordered w-full mb-4"
+              className="input input-bordered w-full mb-4 dark:text-white"
             />
             <textarea
               placeholder="Assignment Description"
