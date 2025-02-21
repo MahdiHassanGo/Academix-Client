@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: ['class', 'class'], // Add this line to enable class-based dark mode
+  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -33,7 +36,8 @@ export default {
   },
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ['light', 'dark', 'synthwave'], 
+    themes: ['light', 'dark', 'synthwave'],
+    darkTheme: 'dark', // Ensure 'dark' class is the active theme
   },
 }
 

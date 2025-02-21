@@ -112,7 +112,7 @@ export const AnimatedTestimonials = ({ testimonials = [], autoplay = false }) =>
             <div className="text-xl text-black mt-4 dark:text-black">
               <StarRating rating={testimonials[active].rating} /> {/* Use StarRating component */}
             </div>
-            <motion.p className="text-lg text-black mt-8 dark:text-black">
+            <motion.p className="text-lg text-black mt-8 dark:text-white">
               {testimonials[active]?.review?.split(" ").map((word, index) => (
                 <motion.span
                   key={index}

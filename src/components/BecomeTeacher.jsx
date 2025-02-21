@@ -20,13 +20,13 @@ const BecomeTeacher = () => {
                     alt="Teacher" 
                 />
                 <div className="text-center md:text-left max-w-[600px]" data-aos="fade-down-left">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-4">Become a 
+                    <h1 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white">Become a 
                         <span className=" ml-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-orange-500">
                     Teacher </span> </h1>
-                    <p className="text-base md:text-lg leading-relaxed mb-4">
+                    <p className="text-base md:text-lg leading-relaxed mb-4 dark:text-white">
                         Becoming a teacher means having the opportunity to inspire and shape the minds of the next generation. You'll have the chance to ignite a passion for learning, encourage critical thinking, and help students discover their potential. It's a profession that allows you to make a lasting impact on your students' lives and future.
                     </p>
-                    <Link to='/addteacher'className=" btn text-xl md:text-2xl font-bold">Become a Teacher</Link>
+                    <Link to='/addteacher'className=" btn text-xl md:text-2xl font-bold hover:bg-black hover:text-white  hover:dark:bg-white hover:dark:text-black  ">Become a Teacher</Link>
                 </div>
             </div>
         </div>

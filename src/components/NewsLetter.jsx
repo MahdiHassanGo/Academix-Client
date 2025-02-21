@@ -32,11 +32,11 @@ const NewsLetter = () => {
     >
      
       <div className="w-full md:w-1/2 md:ml-40">
-        <h6 className="text-2xl font-bold mb-6">Contact Us</h6>
+        <h6 className="text-2xl font-bold mb-6 dark:text-black">Contact Us</h6>
         <form onSubmit={handleSendEmail}>
           <div className="form-control w-full max-w-sm">
             <label className="label">
-              <span className="label-text">Enter your email address</span>
+              <span className="label-text dark:text-black">Enter your email address</span>
             </label>
             <div className="flex gap-2">
               <input

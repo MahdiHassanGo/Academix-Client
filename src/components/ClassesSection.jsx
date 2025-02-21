@@ -42,7 +42,7 @@ const ClassesSection = () => {
       <div className="divider"></div>
       <div className="hero-content text-center">
         <div className="max-w-md">
-          <h1 className="text-5xl font-bold text-black mt-10" data-aos="fade-up">
+          <h1 className="text-5xl font-bold text-black dark:text-white mt-10" data-aos="fade-up">
             Top Enrolled Classes
           </h1>
         </div>

@@ -12,7 +12,7 @@ const Companies = () => {
   return (
     <div className="overflow-hidden" style={{ textAlign: "center", padding: "20px" }}>
        <div className="divider"></div>
-      <h2>
+      <h2 className="text-black dark:text-white">
         Trusted by over <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-orange-500 text-3xl font-bold">10,000</span>  companies and millions of learners around the
         world
       </h2>
