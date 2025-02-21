@@ -202,12 +202,12 @@ const AllUsers = () => {
 
   return (
     <div>
-      <div className="flex justify-evenly my-4" data-aos="fade-up">
+      <div className="flex justify-evenly my-4 dark:text-white" data-aos="fade-up">
         <h2 className="text-3xl">All Users</h2>
         <h2 className="text-3xl">Total Users: {users.length}</h2>
       </div>
 
-      <div className="w-11/12 mx-auto overflow-auto">
+      <div className="w-11/12 mx-auto overflow-auto dark:text-white">
         <table className="ml-5 table table-zebra w-full">
           <thead>
             <tr>
@@ -227,7 +227,7 @@ const AllUsers = () => {
                 <td>{user.role}</td>
                 <td>
                   {user.role === "admin" ? (
-                    <button onClick={() => handleRemoveAdmin(user)} className="btn bg-red-500">
+                    <button onClick={() => handleRemoveAdmin(user)} className="btn bg-red-500 dark:text-white">
                       Remove Admin <TiCancel />
                     </button>
                   ) : (

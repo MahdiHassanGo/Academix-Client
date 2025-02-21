@@ -121,8 +121,8 @@ const AllClasses = () => {
   if (error) return <p className="text-red-500">{error}</p>;
 
   return (
-    <div className="mt-10 w-11/12 mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-6">All Classes</h1>
+    <div className="mt-10 w-11/12 mx-auto dark:text-black">
+      <h1 className="text-3xl font-bold text-center mb-6 dark:text-white">All Classes</h1>
 
       {/* Table Container with Overflow */}
       <div className="overflow-auto">

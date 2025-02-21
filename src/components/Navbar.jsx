@@ -56,7 +56,8 @@ const Navbar = () => {
 
       
           <div
-            className={`absolute top-16 left-0 w-full  z-10 p-4 transition-all duration-300 ease-in md:static md:flex md:p-0 md:gap-6 md:w-auto ${
+            className={`absolute top-16 left-0 w-full  z-10 p-4 transition-all duration-300 ease-in 
+            dark:text-black md:static md:flex md:p-0 md:gap-6 md:w-auto ${
               isMenuOpen ? "block" : "hidden"
             }`}
           >

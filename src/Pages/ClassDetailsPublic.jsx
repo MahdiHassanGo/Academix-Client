@@ -47,8 +47,8 @@ const ClassDetailsPublic = () => {
     <div>
       <Navbar />
       <div className="mt-40 w-11/12 mx-auto mb-10">
-        <h1 className="text-3xl font-bold text-center mb-6">Class Details</h1>
-        <div className="card bg-white shadow-md rounded-lg p-6 flex md:flex-row">
+        <h1 className="text-3xl font-bold text-center mb-6 dark:text-white">Class Details</h1>
+        <div className="card bg-white shadow-md rounded-lg p-6 dark:text-black flex md:flex-row">
           <figure>
             <img
               src={classData.image}

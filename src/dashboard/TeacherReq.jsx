@@ -185,20 +185,20 @@ const TeacherReq = () => {
 
   return (
     <div>
-      <div className="flex justify-evenly my-4">
+      <div className="flex justify-evenly my-4 dark:text-white">
         <h2 className="text-3xl">Pending Teacher Requests</h2>
         <h2 className="text-3xl">Total Requests: {teachers.length}</h2>
       </div>
 
       {teachers.length === 0 ? (
-        <div className="text-center mt-10">
+        <div className="text-center mt-10 dark:text-white">
           <FaChalkboardTeacher className="text-6xl text-gray-400 mx-auto" />
           <h2 className="text-2xl text-gray-500 mt-4">
             No teacher requests currently.
           </h2>
         </div>
       ) : (
-        <div className="overflow-x-auto w-11/12 mx-auto">
+        <div className="overflow-x-auto w-11/12 mx-auto ">
           <table className="table table-zebra w-full">
             <thead>
               <tr>
