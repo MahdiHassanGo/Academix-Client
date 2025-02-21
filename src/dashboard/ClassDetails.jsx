@@ -28,7 +28,7 @@ const ClassDetails = () => {
   useEffect(() => {
     const fetchClassDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/classes/${classId}`);
+        const response = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/classes/${classId}`);
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -57,7 +57,7 @@ const ClassDetails = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/assignments`, {
+      const response = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/assignments`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

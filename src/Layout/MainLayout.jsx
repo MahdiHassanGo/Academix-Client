@@ -14,6 +14,11 @@ import Total from "../components/Total";
 import NewsLetter from "../components/NewsLetter";
 
 const MainLayout = () => {
+  fetch("https://b10a12-server-side-mahdi-hassan-go.vercel.app/feedback")
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error("Fetch error:", error));
+
   useEffect(() => {
     window.scrollTo(0, 0);
 

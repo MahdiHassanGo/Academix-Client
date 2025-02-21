@@ -34,7 +34,7 @@ const MyEnrolledClassDetails = () => {
       try {
      
 
-        const classResponse = await fetch(`http://localhost:5000/classes/${classId}`);
+        const classResponse = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/classes/${classId}`);
         if (!classResponse.ok) {
           throw new Error(`HTTP error! Status: ${classResponse.status}`);
         }
@@ -42,7 +42,7 @@ const MyEnrolledClassDetails = () => {
        
         setClassData(classData);
 
-        const assignmentsResponse = await fetch(`http://localhost:5000/assignments/${classId}`);
+        const assignmentsResponse = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/assignments/${classId}`);
         if (!assignmentsResponse.ok) {
           throw new Error(`HTTP error! Status: ${assignmentsResponse.status}`);
         }
@@ -64,7 +64,7 @@ const MyEnrolledClassDetails = () => {
 
   const handleSubmitAssignment = async (assignmentId) => {
     try {
-      const response = await fetch(`http://localhost:5000/assignments/${assignmentId}/submit`, {
+      const response = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/assignments/${assignmentId}/submit`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -106,7 +106,7 @@ const MyEnrolledClassDetails = () => {
 
   const handleFeedbackSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:5000/feedback", {
+      const response = await fetch("https://b10a12-server-side-mahdi-hassan-go.vercel.app/feedback", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

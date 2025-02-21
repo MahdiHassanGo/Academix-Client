@@ -32,7 +32,7 @@ const Profile = () => {
       const fetchUserData = async () => {
         try {
          
-          const userResponse = await fetch(`http://localhost:5000/users/email/${user.email}`, {
+          const userResponse = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/users/email/${user.email}`, {
             method: 'GET',
             headers: {
               Authorization: `Bearer ${localStorage.getItem('access-token')}`,

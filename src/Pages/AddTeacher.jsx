@@ -36,7 +36,7 @@ const AddTeacher = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/teachers?email=${user.email}`)
+      fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/teachers?email=${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.length > 0) {
@@ -62,7 +62,7 @@ const AddTeacher = () => {
       status: "pending",
     };
 
-    fetch("http://localhost:5000/teachers", {
+    fetch("https://b10a12-server-side-mahdi-hassan-go.vercel.app/teachers", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(teacherRequest),

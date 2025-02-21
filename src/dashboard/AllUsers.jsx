@@ -29,7 +29,7 @@ const AllUsers = () => {
       }
 
       try {
-        const response = await fetch("http://localhost:5000/users", {
+        const response = await fetch("https://b10a12-server-side-mahdi-hassan-go.vercel.app/users", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -73,7 +73,7 @@ const AllUsers = () => {
       }
 
       try {
-        const response = await fetch(`http://localhost:5000/users/admin/${selectedUser._id}`, {
+        const response = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/users/admin/${selectedUser._id}`, {
           method: "PATCH",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -124,7 +124,7 @@ const AllUsers = () => {
       }
 
       try {
-        const response = await fetch(`http://localhost:5000/users/remove-admin/${selectedUser._id}`, {
+        const response = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/users/remove-admin/${selectedUser._id}`, {
           method: "PATCH",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -174,7 +174,7 @@ const AllUsers = () => {
         }
 
         try {
-          const response = await fetch(`http://localhost:5000/users/${selectedUser._id}`, {
+          const response = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/users/${selectedUser._id}`, {
             method: "DELETE",
             headers: {
               Authorization: `Bearer ${token}`,
@@ -202,12 +202,12 @@ const AllUsers = () => {
 
   return (
     <div>
-      <div className="flex justify-evenly my-4 dark:text-white" data-aos="fade-up">
+      <div className="flex justify-evenly my-4" data-aos="fade-up">
         <h2 className="text-3xl">All Users</h2>
         <h2 className="text-3xl">Total Users: {users.length}</h2>
       </div>
 
-      <div className="w-11/12 mx-auto overflow-auto dark:text-white">
+      <div className="w-11/12 mx-auto overflow-auto">
         <table className="ml-5 table table-zebra w-full">
           <thead>
             <tr>
@@ -227,7 +227,7 @@ const AllUsers = () => {
                 <td>{user.role}</td>
                 <td>
                   {user.role === "admin" ? (
-                    <button onClick={() => handleRemoveAdmin(user)} className="btn bg-red-500 dark:text-white">
+                    <button onClick={() => handleRemoveAdmin(user)} className="btn bg-red-500">
                       Remove Admin <TiCancel />
                     </button>
                   ) : (

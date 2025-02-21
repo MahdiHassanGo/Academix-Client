@@ -26,7 +26,7 @@ const AllClasses = () => {
   const fetchClasses = async () => {
     try {
       const token = localStorage.getItem("access-token");
-      const response = await fetch("http://localhost:5000/classes", {
+      const response = await fetch("https://b10a12-server-side-mahdi-hassan-go.vercel.app/classes", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -54,7 +54,7 @@ const AllClasses = () => {
   const handleApprove = async (id) => {
     try {
       const token = localStorage.getItem("access-token");
-      const response = await fetch(`http://localhost:5000/classes/${id}/approve`, {
+      const response = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/classes/${id}/approve`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -85,7 +85,7 @@ const AllClasses = () => {
   const handleReject = async (id) => {
     try {
       const token = localStorage.getItem("access-token");
-      const response = await fetch(`http://localhost:5000/classes/${id}/reject`, {
+      const response = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/classes/${id}/reject`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,

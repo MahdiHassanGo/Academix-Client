@@ -71,7 +71,7 @@ const CheckoutForm = () => {
       };
 
       const token = localStorage.getItem("access-token");
-      const response = await fetch(`http://localhost:5000/enroll/${classData._id}`, {
+      const response = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/enroll/${classData._id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -31,7 +31,7 @@ const TeacherReq = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/teachers/pending", {
+      const response = await fetch("https://b10a12-server-side-mahdi-hassan-go.vercel.app/teachers/pending", {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const TeacherReq = () => {
 
     try {
       const teacherResponse = await fetch(
-        `http://localhost:5000/teachers/${teacher.email}`,
+        `https://b10a12-server-side-mahdi-hassan-go.vercel.app/teachers/${teacher.email}`,
         {
           method: "PATCH",
           headers: {
@@ -84,7 +84,7 @@ const TeacherReq = () => {
       }
 
       const userResponse = await fetch(
-        `http://localhost:5000/users/role/${teacher.email}`,
+        `https://b10a12-server-side-mahdi-hassan-go.vercel.app/users/role/${teacher.email}`,
         {
           method: "PATCH",
           headers: {
@@ -143,7 +143,7 @@ const TeacherReq = () => {
 
         try {
           const response = await fetch(
-            `http://localhost:5000/teachers/${teacher._id}/reject`,
+            `https://b10a12-server-side-mahdi-hassan-go.vercel.app/teachers/${teacher._id}/reject`,
             {
               method: "PATCH",
               headers: {

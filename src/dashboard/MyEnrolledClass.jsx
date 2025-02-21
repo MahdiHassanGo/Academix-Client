@@ -30,7 +30,7 @@ const MyEnrolledClass = () => {
           throw new Error("No authentication token found");
         }
 
-        const response = await fetch(`http://localhost:5000/enrollments/user/${userEmail}`, {
+        const response = await fetch(`https://b10a12-server-side-mahdi-hassan-go.vercel.app/enrollments/user/${userEmail}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

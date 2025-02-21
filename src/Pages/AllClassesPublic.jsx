@@ -28,7 +28,7 @@ const AllClassesPublic = () => {
   useEffect(() => {
     const fetchClasses = async () => {
       try {
-        const response = await fetch("http://localhost:5000/classes", {
+        const response = await fetch("https://b10a12-server-side-mahdi-hassan-go.vercel.app/classes", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("access-token")}`,
           },
@@ -83,7 +83,7 @@ const AllClassesPublic = () => {
                   className="w-full h-56 object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-                  <h2 className="text-xl font-bold text-white">{cls.title}</h2>
+                  <h2 className="text-xl font-bold text-white dark:text-black">{cls.title}</h2>
                 </div>
               </figure>
               <div className="p-6">
